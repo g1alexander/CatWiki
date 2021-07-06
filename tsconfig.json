@@ -5,6 +5,8 @@
     "module": "es6",
     "target": "es5",
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "include": ["src/*", "files.d.ts"] /// <-- Like this!!
 }

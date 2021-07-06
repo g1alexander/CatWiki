@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg|webp)$/,
-        use: ["file-loader?name=assets/[name].[ext]", "image-webpack-loader"],
+        use: ["file-loader?name=./images/[name].[ext]", "image-webpack-loader"],
       },
     ],
   },
