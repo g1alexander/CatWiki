@@ -1,8 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 @import url("./normalize.css");
+@import url("./wrapper.css");
+@import url("./header.css");
+@import url("./footer.css");
+@import url("./hero.css");
+@import url("./content.css");
+@import url("./info.css");
+
+:root {
+  --montserrat: "Montserrat", sans-serif;
+  --size: 10px;
+  --bg: #f5f5f5;
+  --brown: #291507;
+  --white: #ffffff;
+  --black: rgba(0, 0, 0, 1);
+  --gray: #e3e1dc;
+  --brown-gradient: rgba(41, 21, 7, 0.6);
+  --active: #544439;
+  --desactive: #e0e0e0;
+}
 
 body {
-  background: #f5f5f5;
-  color: #222;
+  font-family: var(--montserrat);
+  font-size: var(--size);
+  background: var(--bg);
+  color: var(--brown);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+}
+.main {
+  flex-grow: 1;
+}
+hr {
+  width: 5.9rem;
+  text-align: start;
   margin: 0;
-  padding: 0;
+  margin-top: 0.7rem;
+  background-color: var(--brown);
+  border-radius: 7.7rem;
+  height: 0.3rem;
+}
+a {
+  text-decoration: none;
+  color: var(--brown-gradient);
+  font-size: 1rem;
 }

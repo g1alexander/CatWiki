@@ -1,0 +1,44 @@
+.content {
+  background-color: var(--gray);
+  border-radius: 0px 0px 4.2rem 4.2rem;
+  padding-inline-start: 7rem;
+  padding-inline-end: 7rem;
+  padding-block-start: 2rem;
+  padding-block-end: 1rem;
+}
+
+.content-most {
+  font-size: 1rem;
+  font-weight: 500;
+}
+/*  */
+.content-breeds {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.content-breeds h2 {
+  font-size: 3.4rem;
+  width: 60%;
+  margin-bottom: 0;
+}
+/*  */
+.content-figures {
+  padding-block-start: 2.5rem;
+}
+.content-card {
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.content-card img {
+  width: 100%;
+  border-radius: 2rem;
+}
+.content-card figcaption {
+  padding-block-start: 1rem;
+  font-weight: 600;
+}
+.content-card figcaption a {
+  font-size: 0.9rem;
+  color: var(--brown);
+}

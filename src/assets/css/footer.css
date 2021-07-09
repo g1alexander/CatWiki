@@ -1,0 +1,22 @@
+.footer {
+  background: var(--black);
+  border-radius: 2rem 2rem 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 7rem;
+  padding-inline-end: 7rem;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+
+.footer p {
+  color: var(--white);
+  font-size: 0.7rem;
+}
+.footer a {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}

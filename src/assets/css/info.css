@@ -1,0 +1,28 @@
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block-start: 4rem;
+  padding-block-end: 4rem;
+  padding-inline-start: 7rem;
+  padding-inline-end: 7rem;
+}
+.info-content h2 {
+  width: 80%;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.8rem;
+}
+.info-content p {
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding-block-end: 2rem;
+}
+
+.info-images {
+  width: 57%;
+  height: 30rem;
+  column-count: 2;
+  right: 0;
+  text-align: end;
+}
