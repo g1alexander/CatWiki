@@ -20,3 +20,16 @@
   font-size: 0.7rem;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  .footer {
+    display: block;
+  }
+}

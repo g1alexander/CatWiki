@@ -15,7 +15,7 @@
 }
 .info-content p {
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding-block-end: 2rem;
 }
 
@@ -25,4 +25,30 @@
   column-count: 2;
   right: 0;
   text-align: end;
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info {
+    display: block;
+  }
+  .info-content {
+    margin-block-end: 2rem;
+  }
+  .info-images {
+    width: 100%;
+  }
+  .info-images img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 411px) {
+  .info-content h2 {
+    width: 100%;
+  }
 }

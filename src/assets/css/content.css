@@ -42,3 +42,50 @@
   font-size: 0.9rem;
   color: var(--brown);
 }
+
+@media screen and (max-width: 768px) {
+  .content-breeds h2 {
+    font-size: 2.8rem;
+  }
+  .content-figures.grid {
+    grid-auto-rows: 18rem;
+  }
+}
+
+@media screen and (max-width: 731px) {
+  .content-breeds h2 {
+    font-size: 2rem;
+  }
+  .content-figures.grid {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 641px) {
+  .content {
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .content {
+    border-radius: 0px 0px 2.5rem 2.5rem;
+    padding-block-start: 1.8rem;
+    padding-block-end: 3.5rem;
+  }
+  .content-most {
+    font-size: 0.9rem;
+  }
+  .content-breeds h2 {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+  .content-breeds a {
+    display: none;
+  }
+  .content-figures.grid {
+    grid-auto-rows: 11rem;
+    grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  }
+}

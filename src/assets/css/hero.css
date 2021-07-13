@@ -42,3 +42,64 @@
   font-size: 0.8rem;
   font-weight: 500;
 }
+
+@media screen and (max-width: 768px) {
+  .hero--section {
+    padding-block-start: 2.3rem;
+    padding-block-end: 2.3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .hero--section {
+    padding-inline-start: 2rem;
+  }
+  .hero--section {
+    padding-block-start: 2rem;
+    padding-block-end: 2rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    border-radius: 3.2rem 3.2rem 0px 0px;
+  }
+  .hero--section--input {
+    width: 70%;
+  }
+  .hero--section img {
+    max-width: 60%;
+    height: auto;
+  }
+  .hero--section p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    width: 100%;
+    height: auto;
+    border-radius: 2.5rem 2.5rem 0px 0px;
+  }
+
+  .hero--section {
+    padding-inline-end: 0;
+    padding-block-start: 1.8rem;
+    padding-block-end: 1.8rem;
+    width: 80%;
+  }
+  .hero--section img {
+    max-width: 40%;
+    height: auto;
+  }
+  .hero--section p {
+    width: 65%;
+    font-size: 0.8rem;
+  }
+  .hero--section--input {
+    width: 50%;
+  }
+}
