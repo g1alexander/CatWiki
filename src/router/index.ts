@@ -1,4 +1,4 @@
-import { Dinamic } from "../pages/Dinamic";
+import { Cat } from "../pages/Cat";
 import { Home } from "../pages/Home";
 import { Search } from "../pages/Search";
 
@@ -15,7 +15,7 @@ export async function Router() {
     "#search": () => Search(),
   };
 
-  const DinamicView = () => Dinamic();
+  const DinamicView = () => Cat();
 
   const valueHash = getKeyValue(routes)(hash);
 
