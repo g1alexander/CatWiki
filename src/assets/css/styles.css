@@ -6,6 +6,7 @@
 @import url("./hero.css");
 @import url("./content.css");
 @import url("./info.css");
+@import url("./search.css");
 
 :root {
   --montserrat: "Montserrat", sans-serif;

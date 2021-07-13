@@ -3,7 +3,6 @@ import { Home } from "../pages/Home";
 import { Search } from "../pages/Search";
 
 export async function Router() {
-  // const $main = document.getElementById("main");
   let { hash }: any = location;
   const getKeyValue =
     <T extends object, U extends keyof T>(obj: T) =>

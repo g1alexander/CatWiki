@@ -1,0 +1,36 @@
+.search {
+  padding-block-end: 2rem;
+}
+.search h1 {
+  font-size: 1.5rem;
+}
+.search--article {
+  display: flex;
+  padding-block-start: 1rem;
+}
+.search--article a {
+  color: var(--brown);
+}
+.search--article h3 {
+  font-size: 1.3rem;
+}
+.search--article div {
+  margin-inline-start: 2rem;
+  width: 70%;
+}
+.search--article img {
+  border-radius: 1rem;
+}
+.search--article p {
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 500px) {
+  .search--article {
+    display: block;
+  }
+  .search--article div {
+    margin-inline-start: 0rem;
+    width: 100%;
+  }
+}
