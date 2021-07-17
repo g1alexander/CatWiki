@@ -1,7 +1,7 @@
 export class AppState {
   el: string;
-  data: string;
-  template: (data: string) => string;
+  data: string[];
+  template: (data: string[]) => string;
   // constructor del componente
   constructor(options: any) {
     this.el = options.el;
@@ -9,7 +9,6 @@ export class AppState {
     this.template = options.template;
   }
   // methods
-
   // render UI
   render() {
     const $el = document.querySelector(this.el);

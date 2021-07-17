@@ -20,10 +20,11 @@ export async function Router() {
   const valueHash = getKeyValue(routes)(hash);
 
   valueHash
-    ? valueHash()
+    ? await valueHash()
     : hash.includes("#search")
-    ? routes["#search"]()
-    : DinamicView();
+    ? await routes["#search"]()
+    : await DinamicView();
 
-  // document.querySelector(".loader").style.display = "none";
+  const loader = document.querySelector(".loader") as HTMLImageElement;
+  loader.style.display = "none";
 }

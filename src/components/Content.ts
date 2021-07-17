@@ -1,4 +1,16 @@
-export function Content() {
+export function Content(props: any[]) {
+  //FIXME: el estado reactivo esta fallando
+  let html = "";
+  props.forEach((el) => {
+    let { image, id, name } = el;
+    html += /*html*/ `
+      <figure class="content-card">
+        <img src="${image.url}" width="200" height="120" alt="${name}" />
+        <figcaption><a href="#">${name}</a></figcaption>
+      </figure>
+    `;
+  });
+
   let $section = document.createElement("section");
   $section.classList.add("content");
   $section.innerHTML = /*html*/ `
@@ -10,23 +22,9 @@ export function Content() {
       <a href="#">SEE MORE <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="grid content-figures">
-      <figure class="content-card">
-        <img src="https://placeimg.com/200/200/animals" alt="tech" />
-        <figcaption><a href="#">Bengal</a></figcaption>
-      </figure>
-      <figure class="content-card">
-        <img src="https://placeimg.com/200/200/animals" alt="tech" />
-        <figcaption><a href="#">Savannah</a></figcaption>
-      </figure>
-      <figure class="content-card">
-        <img src="https://placeimg.com/200/200/animals" alt="tech" />
-        <figcaption><a href="#">Norwegian Forest Cat</a></figcaption>
-      </figure>
-      <figure class="content-card">
-        <img src="https://placeimg.com/200/200/animals" alt="tech" />
-        <figcaption><a href="#">Selkirk Rex</a></figcaption>
-      </figure>
+      ${html} 
     </div>
   `;
+
   return $section;
 }

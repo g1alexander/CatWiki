@@ -38,6 +38,9 @@ body {
 .main {
   flex-grow: 1;
 }
+.hidden {
+  display: none;
+}
 hr {
   width: 5.9rem;
   text-align: start;
@@ -51,4 +54,15 @@ a {
   text-decoration: none;
   color: var(--brown-gradient);
   font-size: 1rem;
+}
+
+.loader {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  width: 100px;
 }
