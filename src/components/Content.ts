@@ -1,12 +1,10 @@
 export function Content(props: any[]) {
-  //FIXME: el estado reactivo esta fallando
   let html = "";
-  props.forEach((el) => {
-    let { image, id, name } = el;
+  props.forEach(({ image, id, name }) => {
     html += /*html*/ `
       <figure class="content-card">
-        <img src="${image.url}" width="200" height="120" alt="${name}" />
-        <figcaption><a href="#">${name}</a></figcaption>
+        <img src="${image.url}" width="220" height="220" alt="${name}" />
+        <figcaption><a href="#${name}" id="${id}">${name}</a></figcaption>
       </figure>
     `;
   });

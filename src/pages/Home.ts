@@ -13,7 +13,7 @@ export async function Home() {
   });
 
   await ajax({
-    url: `${api.URL}${api.SEARCH_TOP}0`,
+    url: `${api.URL}${api.SEARCH_TOP}0&limit=4`,
     success: (res: any) => $home.appendChild(Content(res)),
   });
 
