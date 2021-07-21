@@ -57,12 +57,9 @@ a {
 }
 
 .loader {
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: auto;
 }
 
 .loader img {
-  width: 100px;
+  width: 80px;
 }

@@ -11,8 +11,8 @@ export function App() {
 
   $app.classList.add("wrapper");
   $app.appendChild(Header());
-  $app.appendChild(Loader());
   $app.appendChild(Main());
+  $app.appendChild(Loader());
   $app.appendChild(Footer());
 
   Router();

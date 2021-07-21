@@ -17,7 +17,7 @@ export function Content(props: any[]) {
     </div>
     <div class="content-breeds">
       <h2>66+ Breeds For you to discover</h2>
-      <a href="#">SEE MORE <i class="fas fa-arrow-right"></i></a>
+      <a href="#search-top">SEE MORE <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="grid content-figures">
       ${html} 

@@ -14,7 +14,7 @@ export async function ajax(props: object) {
       console.error(err);
       let message =
         err.statusText || "Ocurrio un error en la peticion a la API";
-      document.getElementById("main").innerHTML = /*html*/ `
+      document.getElementById(".main").innerHTML = /*html*/ `
         <div class="error">
           <p>Error ${err.status}: ${message}</p>
         </div>

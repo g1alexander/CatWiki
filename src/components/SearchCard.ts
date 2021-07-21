@@ -1,25 +1,21 @@
-export function SearchCard() {
-  return /*html*/ `
+export function SearchCard(num, props) {
+  const $content = document.querySelector(".main");
+
+  $content.innerHTML += /*html*/ `
       <article class="search--article">
-        <img src="https://placeimg.com/200/200/animals" alt="">
+        <img src="${
+          props.image
+            ? props.image.url
+              ? props.image.url
+              : "https://www.pinclipart.com/picdir/middle/522-5228692_black-cat-clipart-chococat-dibujos-de-gatos-tiernos.png"
+            : "https://www.pinclipart.com/picdir/middle/522-5228692_black-cat-clipart-chococat-dibujos-de-gatos-tiernos.png"
+        }" width="200" height="200" alt="${props.name}">
         <div>
-          <a href="#"><h3>1. Bengal</h3></a>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit magni, maiores sed vero quae deleniti delectus ex sapiente, fuga recusandae odit? A itaque facere mollitia iste. Iusto porro minus autem!</p>
-        </div>
-      </article>
-      <article class="search--article">
-        <img src="https://placeimg.com/200/200/animals" alt="">
-        <div>
-          <a href="#"><h3>1. Bengal</h3></a>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit magni, maiores sed vero quae deleniti delectus ex sapiente, fuga recusandae odit? A itaque facere mollitia iste. Iusto porro minus autem!</p>
-        </div>
-      </article>
-      <article class="search--article">
-        <img src="https://placeimg.com/200/200/animals" alt="">
-        <div>
-          <a href="#"><h3>1. Bengal</h3></a>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit magni, maiores sed vero quae deleniti delectus ex sapiente, fuga recusandae odit? A itaque facere mollitia iste. Iusto porro minus autem!</p>
+          <a href="#${props.name}"><h3>${num++}. ${props.name}</h3></a>
+          <p>${props.description}</p>
         </div>
       </article>
   `;
+
+  return $content;
 }

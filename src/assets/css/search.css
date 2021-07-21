@@ -1,12 +1,10 @@
-.search {
-  padding-block-end: 2rem;
-}
 .search h1 {
   font-size: 1.5rem;
 }
 .search--article {
   display: flex;
   padding-block-start: 1rem;
+  padding-block-end: 1rem;
 }
 .search--article a {
   color: var(--brown);

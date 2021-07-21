@@ -1,14 +1,15 @@
-import { SearchCard } from "../components/SearchCard";
+import { SearchLogic } from "../components/SearchLogic";
 
-export function Search() {
-  const $content = document.querySelector(".main");
+export async function Search() {
+  let $content = document.querySelector(".main"),
+    $section = document.createElement("section");
 
-  $content.innerHTML = /*html*/ `
-    <section class="search">
-      <h1>Top 10 most searched breeds</h1>
-      ${SearchCard()}
-    </section>
-  `;
+  $section.classList.add("search");
+
+  $section.innerHTML = `<h1>Top 10 most searched breeds</h1>`;
+  $content.appendChild($section);
+
+  await SearchLogic();
 
   return $content;
 }
