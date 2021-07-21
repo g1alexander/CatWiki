@@ -7,7 +7,11 @@ import api from "../helpers/api";
 export async function Home() {
   const $home = document.querySelector(".main");
 
-  $home.appendChild(Hero());
+  await ajax({
+    url: `${api.URL}${api.BREEDS}`,
+    success: (res: any) => $home.appendChild(Hero(res)),
+  });
+
   await ajax({
     url: `${api.URL}${api.SEARCH_TOP}0`,
     success: (res: any) => $home.appendChild(Content(res)),
