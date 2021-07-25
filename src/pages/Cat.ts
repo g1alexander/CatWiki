@@ -9,8 +9,10 @@ export async function Cat() {
   const $section = document.createElement("section");
   $section.classList.add("cat");
 
+  let idCat = localStorage.getItem("id-cat");
+
   await ajax({
-    url: `${api.URL}${api.CAT}beng`,
+    url: `${api.URL}${api.CAT}${idCat}`,
     success: (data) => {
       $section.appendChild(CatDescription(data[0]));
       $section.appendChild(CatImages(data));

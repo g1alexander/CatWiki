@@ -2,6 +2,7 @@ import HeroImagelg from "../assets/images/HeroImagelg.png";
 import logo from "../assets/images/CatwikiLogo-white.svg";
 import { validation } from "../helpers/validation";
 import { AppState } from "../store/index";
+import { useUrl } from "../helpers/useUrl";
 
 const d = document;
 let json: any = [],
@@ -15,8 +16,12 @@ const state = new AppState({
   template: function (props) {
     let search = props.search
       .map(
-        (item) =>
-          /*html*/ `<dt><a href="#${item.name}" id="${item.id}">${item.name}</a></dt>`
+        (item) => /*html*/ `
+          <dt>
+            <a href="#${useUrl(item.name)}" id="event" data-id="${item.id}">${
+          item.name
+        }</a>
+          </dt>`
       )
       .join("");
     return search;

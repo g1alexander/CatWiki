@@ -10,7 +10,8 @@ export function Info() {
       <hr>
       <h2>Why should you have a cat?</h2>
       <p>Having a cat around you can actually trigger the release of calming chemicals in your body which lower your stress and anxiety leves</p>
-      <a href="#">READ MORE <i class="fas fa-arrow-right"></i></a>
+      <a href="https://icatcare.org/advice/thinking-of-getting-a-cat/" rel="noopener"
+      target="_blank">READ MORE <i class="fas fa-arrow-right"></i></a>
     </div>
     <div class="info-images">
       <img src="${image2}" width="273" height="167" alt="image2">

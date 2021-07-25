@@ -1,49 +1,52 @@
+import { useBreed } from "../helpers/useBreed";
+
 export function CatDescription(props) {
-  console.log(props);
+  let { url, breeds } = props;
+  let {
+    adaptability,
+    affection_level,
+    child_friendly,
+    grooming,
+    intelligence,
+    health_issues,
+    social_needs,
+    stranger_friendly,
+  } = breeds[0];
+
+  let breed = [
+    { name: "Adaptability", por: adaptability },
+    { name: "Affection level", por: affection_level },
+    { name: "Child friendly", por: child_friendly },
+    { name: "Grooming", por: grooming },
+    { name: "Intelligence", por: intelligence },
+    { name: "Health issues", por: health_issues },
+    { name: "Social needs", por: social_needs },
+    { name: "Stranger friendly", por: stranger_friendly },
+  ];
+  let $html = "";
+
+  for (const { name, por } of breed) {
+    $html += /*html*/ `
+      <li>
+        <span class="span">${name}:</span> 
+        ${useBreed(por)}
+      </li>
+    `;
+  }
+
   const $article = document.createElement("article");
   $article.classList.add("cat--description");
 
   $article.innerHTML = /*html*/ `
-    <img src="https://placeimg.com/300/300/animals" alt="">
+    <img src="${url}" width="300" height="300" alt="">
     <div>
-      <h3>Bengal</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ea hic quas? Ex explicabo numquam quaerat qui perspiciatis iure dolores soluta ea? Suscipit atque recusandae nostrum, numquam ducimus cumque nesciunt!</p>
-      <ul>
-        <li><span>Temperament:</span> Alert, Agile, Energetic, Demanding, Intelligent</li>
-        <li><span>Origin:</span> United States</li>
-        <li><span>Life Span:</span> 12 - 15 years</li>
-        <li>
-          <span class="span">Adaptability:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Affection level:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Child friendly:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Grooming:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Intelligence:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Health issues:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Social needs:</span> 
-          <hr class="active"><hr><hr><hr><hr>
-        </li>
-        <li>
-          <span class="span">Stranger friendly:</span> 
-          <hr><hr><hr><hr><hr>
-        </li>
+      <h3>${breeds[0].name}</h3>
+      <p>${breeds[0].description}</p>
+      <ul id="ul">
+        <li><span>Temperament:</span> ${breeds[0].temperament}</li>
+        <li><span>Origin:</span> ${breeds[0].origin}</li>
+        <li><span>Life Span:</span> ${breeds[0].life_span} years</li>
+        ${$html}
       </ul>
     </div>
   `;

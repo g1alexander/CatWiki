@@ -1,10 +1,14 @@
+import { useUrl } from "../helpers/useUrl";
+
 export function Content(props: any[]) {
   let html = "";
   props.forEach(({ image, id, name }) => {
     html += /*html*/ `
       <figure class="content-card">
         <img src="${image.url}" width="220" height="220" alt="${name}" />
-        <figcaption><a href="#${name}" id="${id}">${name}</a></figcaption>
+        <figcaption><a href="#${useUrl(
+          name
+        )}" id="event" data-id="${id}">${name}</a></figcaption>
       </figure>
     `;
   });

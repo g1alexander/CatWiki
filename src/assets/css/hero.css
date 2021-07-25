@@ -35,8 +35,10 @@
   padding: 1rem;
   width: 100%;
   border-radius: 5.9rem;
+  font-size: 0.9rem;
   border: 0;
   outline: none;
+  cursor: pointer;
 }
 .hero--section input[type="search"]::placeholder {
   font-size: 0.8rem;
@@ -123,6 +125,6 @@
     font-size: 0.8rem;
   }
   .hero--section--input {
-    width: 50%;
+    width: 100%;
   }
 }
